@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* IPL dark theme - always dark */
+    --background: 0.13 0.028 240;
+    --foreground: 0.97 0.004 240;
+    --card: 0.16 0.032 240;
+    --card-foreground: 0.97 0.004 240;
+    --popover: 0.18 0.03 240;
+    --popover-foreground: 0.97 0.004 240;
+    --primary: 0.78 0.14 70;
+    --primary-foreground: 0.13 0.028 240;
+    --secondary: 0.22 0.04 240;
+    --secondary-foreground: 0.97 0.004 240;
+    --muted: 0.2 0.035 240;
+    --muted-foreground: 0.65 0.015 240;
+    --accent: 0.78 0.14 70;
+    --accent-foreground: 0.13 0.028 240;
+    --destructive: 0.6 0.22 25;
+    --destructive-foreground: 0.97 0.004 240;
+    --border: 0.25 0.035 240;
+    --input: 0.22 0.04 240;
+    --ring: 0.78 0.14 70;
+    --chart-1: 0.55 0.2 260;
+    --chart-2: 0.6 0.22 25;
+    --chart-3: 0.83 0.16 85;
+    --chart-4: 0.78 0.14 70;
+    --chart-5: 0.65 0.18 290;
+    --sidebar: 0.16 0.032 240;
+    --sidebar-foreground: 0.97 0.004 240;
+    --sidebar-primary: 0.78 0.14 70;
+    --sidebar-primary-foreground: 0.13 0.028 240;
+    --sidebar-accent: 0.22 0.04 240;
+    --sidebar-accent-foreground: 0.97 0.004 240;
+    --sidebar-border: 0.25 0.035 240;
+    --sidebar-ring: 0.78 0.14 70;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.83 0.16 75),
+      oklch(0.72 0.17 60)
+    );
+  }
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 11, 20, 0.55) 0%,
+      rgba(6, 11, 20, 0.75) 60%,
+      rgba(6, 11, 20, 0.95) 100%
+    );
+  }
+  .text-gold {
+    color: oklch(0.78 0.14 70);
+  }
+  .bg-header {
+    background-color: oklch(0.18 0.04 240);
+  }
+  .border-gold {
+    border-color: oklch(0.78 0.14 70);
+  }
+}
